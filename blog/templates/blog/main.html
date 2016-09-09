@@ -11,9 +11,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Clean Blog</h1>
+                        <h1>Fresh News</h1>
                         <hr class="small">
-                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                        <span class="subheading">Только свежие новости</span>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,8 @@
                         {{ post.preview }}
                     </h3>
                 </a>
-                <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+{#              <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>#}
+                <p class="post-meta">{{ post.date_created }}</p>
             </div>
             <hr>
         {% endfor %}
