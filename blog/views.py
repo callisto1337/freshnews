@@ -18,12 +18,13 @@ def contacts(request):
         if form.is_valid():
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
-            message = 'Новое сообщение с сайта Fresh News! \n\nОтправитель: ' + name + '\nEmail Адрес: ' \
+            message = 'Вам пришло новое сообщение с сайта Fresh News! \n\nОтправитель: ' + name + '\nEmail Адрес: ' \
                       + email + '\nСообщение: ' + form.cleaned_data['message']
             recipients = ['hazardous333@mail.ru']
+            theme = 'Новое сообщение с сайта Fresh News!'
 
             try:
-                send_mail(name, message, 'hazardous333@gmail.com', recipients)
+                send_mail(theme, message, 'hazardous333@gmail.com', recipients)
             except BadHeaderError:  # Защита от уязвимости
                 return HttpResponse('Invalid header found')
             return render(request, 'blog/contacts.html')
