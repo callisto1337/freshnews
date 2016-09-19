@@ -125,8 +125,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
-
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
 
@@ -157,13 +155,3 @@ TINYMCE_DEFAULT_CONFIG = {
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 110,
 }
-
-# TINYMCE_JS_URL = 'http://debug.example.org/tiny_mce/tiny_mce_src.js'
-# TINYMCE_DEFAULT_CONFIG = {
-#     'plugins': "table,spellchecker,paste,searchreplace",
-#     'theme': "advanced",
-#     'cleanup_on_startup': True,
-#     'custom_undo_redo_levels': 10,
-# }
-# TINYMCE_SPELLCHECKER = True
-# TINYMCE_COMPRESSOR = True
