@@ -1,0 +1,114 @@
+.post-category {
+    float: right;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-style: normal;
+    display: block;
+    margin-top: -3px;
+}
+
+.source, .source a {
+    color: #777;
+    float: right;
+    margin: 0px;
+    line-height: 52px;
+    vertical-align: middle;
+    font-style: normal;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    opacity: .8;
+}
+
+.source a:hover {
+    color: #333;
+}
+
+.btn-previous {
+    float: left;
+}
+
+.pager .current-page, .pager .current-page-min {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 50px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.pager .current-page-min {
+    display: none;
+}
+
+h2.post-title {
+    margin-top: 0px;
+}
+
+.post-preview .post-title {
+    font-size: 30px;
+}
+
+.post-preview .post-subtitle {
+    font-size: 20px;
+    padding: 0px;
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+.container .post-preview .post-meta, .container .post-preview .post-meta span {
+    font-size: 16px;
+}
+
+.post-heading {
+    text-align: center;
+}
+
+.post_detail-header {
+    font-size: 36px;
+}
+
+.intro-header .container .post-heading .post_detail-header h2.subheading {
+    font-size: 24px;
+}
+
+.intro-header-post_detail {
+    background-color: #333 !important;
+    height: 60px;
+}
+
+@media screen and (max-width: 400px) {
+    .pager .current-page-min {
+        display: block;
+    }
+
+    .pager .current-page {
+        display: none;
+    }
+
+    .container .post-preview h2.post-title {
+        font-size: 26px;
+    }
+
+    .container .row .site-heading h1, .post-heading .post_detail-header {
+        font-size: 36px;
+    }
+
+    .post_detail-header {
+        font-size:26px;
+        margin-top: 10px;
+    }
+
+    .post-detail {
+        font-size: 90% !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .intro-header-post_detail {
+        height: 54px;
+    }
+
+    .post-meta {
+        margin: 20px auto;
+    }
+}

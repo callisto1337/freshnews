@@ -1,20 +1,19 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 
-{% block title %}Fresh News - Свежие новости{% endblock %}
+{% block title %}Новости Телеком{% endblock %}
 
 
 <!-- Page Header -->
 {% block header %}
-{#    <header class="intro-header" style="background-image: url('{% static "img/bg-main.jpg" %}')">#}
     <header class="intro-header" style="background-image: url('{% static "img/bg-telekom.jpg" %}')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Fresh News</h1>
+                        <h1>Телеком</h1>
                         <hr class="small">
-                        <span class="subheading">Только свежие новости</span>
+                        <span class="subheading">Новости категории Телеком</span>
                     </div>
                 </div>
             </div>
@@ -28,20 +27,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-{#                <h2 class="post-title">Самое интересное:</h2>#}
-{#                <hr>#}
                 {% for post in posts %}
                     <div class="post-preview">
                         <a href="{% url 'post_detail' pk=post.pk %}">
-                            <h2 class="post-title post-interesting">
+                            <h2 class="post-title">
                                 {{ post.title }}
                             </h2>
                             <h3 class="post-subtitle">
                                 {{ post.preview }}
                             </h3>
                         </a>
-
-                        <p class="post-meta">{{ post.date_created }}<span class="post-category">{{ post.category }}</span></p>
+                        <p class="post-meta">{{ post.date_created }}</p>
                     </div>
                     <hr>
                 {% endfor %}
@@ -53,11 +49,10 @@
                             <a href="/">Назад</a>
                         </li>
                     {% elif posts.has_previous %}
-                        <li class="next btn-previous">
+                        <li class="next btn-previous" class="">
                             <a href="?page={{ posts.previous_page_number }}">Назад</a>
                         </li>
-                    {% endif %}
-                    {% if posts.paginator.num_pages > 1 %}
+                    {% elif posts.paginator.num_pages > 1 %}
                         <li class="current-page">
                             Страница {{ posts.number }} из {{ posts.paginator.num_pages }}
                         </li>

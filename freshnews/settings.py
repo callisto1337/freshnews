@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'PIL',
+    'tinymce'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -132,7 +134,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets', 'static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'assets', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 
 APPEND_SLASH=False
@@ -143,3 +145,25 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'tkachev9457@gmail.com'
 EMAIL_HOST_PASSWORD = 'sotmarket321'
 EMAIL_PORT = 587
+
+
+TINYMCE_DEFAULT_CONFIG = {
+	'plugins': 'table,xhtmlxtras,paste,searchreplace',
+    'theme': "advanced",
+    'theme_advanced_buttons3_add': 'cite,abbr',
+	'paste_remove_styles': 'true',
+	'paste_remove_styles_if_webkit': 'true',
+	'paste_strip_class_attributes': 'all',
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 110,
+}
+
+# TINYMCE_JS_URL = 'http://debug.example.org/tiny_mce/tiny_mce_src.js'
+# TINYMCE_DEFAULT_CONFIG = {
+#     'plugins': "table,spellchecker,paste,searchreplace",
+#     'theme': "advanced",
+#     'cleanup_on_startup': True,
+#     'custom_undo_redo_levels': 10,
+# }
+# TINYMCE_SPELLCHECKER = True
+# TINYMCE_COMPRESSOR = True
