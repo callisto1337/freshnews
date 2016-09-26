@@ -55,8 +55,14 @@ h2.post-title {
     margin: 0 auto;
 }
 
-.container .post-preview .post-meta, .container .post-preview .post-meta span {
+.container .post-preview .post-meta, .container .post-preview .post-meta span, .post-meta {
     font-size: 16px;
+}
+
+.container .post-detail .post-meta {
+    /*font-style: italic;*/
+    color: #777;
+    margin: 20px 0px;
 }
 
 .post-heading {
@@ -74,6 +80,30 @@ h2.post-title {
 .intro-header-post_detail {
     background-color: #333 !important;
     height: 60px;
+}
+
+.post-detail_image {
+    float: left;
+}
+
+.post-detail_images {
+    margin-top: 30px;
+}
+
+.post-detail_image:last-child {
+    margin-bottom: 20px;
+}
+
+footer .copyright {
+    margin-top: 10px;
+}
+
+.error_404 {
+    /*width: 385px;*/
+    /*height: 250px;*/
+    font-size: 140%;
+    text-align: center;
+    margin-top: 10%;
 }
 
 @media screen and (max-width: 400px) {
@@ -111,4 +141,8 @@ h2.post-title {
     .post-meta {
         margin: 20px auto;
     }
+}
+
+@media screen and (max-width: 991px) {
+
 }

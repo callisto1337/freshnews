@@ -6,7 +6,6 @@
 
 <!-- Page Header -->
 {% block header %}
-{#    <header class="intro-header" style="background-image: url('{% static "img/bg-main.jpg" %}')">#}
     <header class="intro-header" style="background-image: url('{% static "img/bg-telekom.jpg" %}')">
         <div class="container">
             <div class="row">
@@ -28,8 +27,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-{#                <h2 class="post-title">Самое интересное:</h2>#}
-{#                <hr>#}
                 {% for post in posts %}
                     <div class="post-preview">
                         <a href="{% url 'post_detail' pk=post.pk %}">

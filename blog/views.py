@@ -8,31 +8,18 @@ from .models import Post
 from .forms import ContactsForm
 
 
-# def events(request):
-#     posts = Post.objects.filter(published=True, category=2).order_by('-date_created')
-#     return render(request, 'blog/events.html', {'posts': posts})
-#
-#
-# def telekom(request):
-#     posts = Post.objects.filter(published=True, category=1).order_by('-date_created')
-#     return render(request, 'blog/telekom.html', {'posts': posts})
-
-
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if post.category == 1:
         post.category_id = 1
-    elif post.category == 2:
+    else:
         post.category_id = 2
-    elif post.category == 3:
-        post.category_id = 3
-    return render(request, 'blog/post_detail.html', {'post': post})
+    return render(request, 'blog/post_telekom_and_events.html', {'post': post})
 
 
 def main(request):
     post_list = Post.objects.filter(published=True).order_by('-date_created')
     paginator = Paginator(post_list, 5)
-
     page = request.GET.get('page')
 
     try:

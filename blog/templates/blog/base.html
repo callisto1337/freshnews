@@ -24,6 +24,7 @@
 
     <!-- Custom Fonts -->
     <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/lightbox/css/lightbox.css' %}" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -81,9 +82,9 @@
     <!-- Main Content -->
     {% block content %}{% endblock %}
 
-    <hr>
 
     <!-- Footer -->
+    <hr>
     <footer>
         <div class="container">
             <div class="row">
@@ -132,6 +133,9 @@
 
     <!-- Theme JavaScript -->
     <script src="{% static 'js/clean-blog.min.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'vendor/lightbox/js/lightbox.js' %}"></script>
 
 </body>
 
