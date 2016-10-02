@@ -24,6 +24,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='post',
             name='source_name',
-            field=models.CharField(blank=True, default='РИА Новости', max_length=100, null=True, verbose_name='Название источника'),
+            field=models.CharField(blank=True, default='', max_length=100, null=True, verbose_name='Название источника'),
         ),
     ]

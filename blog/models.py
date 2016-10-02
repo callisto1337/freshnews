@@ -22,11 +22,9 @@ class Post(models.Model):
     images = models.ImageField(upload_to='media/', null=True, blank=True, verbose_name='Картинка')
     date_created = models.DateTimeField(auto_now_add=True, verbose_name=('Дата создания'))
     date_of_change = models.DateTimeField(auto_now=True, verbose_name=('Последнее изменение'))
-    # interesting = models.BooleanField(default=False, verbose_name=('Интересный'))
     published = models.BooleanField(default=True, verbose_name=('Опубликован'))
-    category = models.ForeignKey(Category, default='Телеком', verbose_name=('Категория'))
-    source_link = models.CharField(max_length=100, default='https://ria.ru/', verbose_name=('Ссылка на источник'))
-    source_name = models.CharField(max_length=100, default='РИА Новости', verbose_name=('Название источника'))
+    category = models.ForeignKey(Category, null=True, blank=True, verbose_name=('Категория'))
+    source_link = models.CharField(max_length=100, null=True, blank=True, verbose_name=('Ссылка на источник'))
 
     class Meta:
         verbose_name = 'Пост'
