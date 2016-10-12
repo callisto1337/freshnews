@@ -39,8 +39,8 @@ def contacts(request):
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
-            recipients = ['hazardous333@mail.ru', 'serhei1994@yandex.ru']
-            theme = 'Новое сообщение с сайта Fresh News!'
+            recipients = ['hazardous333@gmail.com', 'serhei1994@yandex.ru']
+            theme = 'Новое сообщение с сайта Fresh News!' + '\n' + 'Имя: ' + name + '\n' + 'Email: ' + email + '\n' + 'Сообщение: ' + message
 
             try:
                 send_mail(theme, message, 'tkachev9457@gmail.com', recipients)

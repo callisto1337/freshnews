@@ -45,8 +45,8 @@
                     {# Content #}
                     {% if post.images %}
                         <div class="post-detail_images">
-                            <a class="col-lg-12 col-md-12 img-responsive post-detail_image" href="{% static post.images %}" data-lightbox="image-1" data-title="Ахуенный текст про заебательскую картинку">
-                                <img class="img-responsive" src="{% static post.images %}" alt="">
+                            <a class="col-lg-12 col-md-12 img-responsive post-detail_image" href="/{{ post.image }}" data-lightbox="image-1" data-title="{{ post.image_description }}">
+                                <img class="img-responsive" src="/{{ post.image }}" alt="">
                             </a>
                         </div>
                     {% endif %}
