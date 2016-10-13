@@ -43,7 +43,7 @@ h2.post-title {
 }
 
 .post-preview .post-title {
-    font-size: 30px;
+    font-size: 28px !important;
 }
 
 .post-preview .post-subtitle {
@@ -60,7 +60,6 @@ h2.post-title {
 }
 
 .container .post-detail .post-meta {
-    /*font-style: italic;*/
     color: #777;
     margin: 20px 0px;
 }
@@ -69,9 +68,9 @@ h2.post-title {
     text-align: center;
 }
 
-/*.post_detail-header {*/
-    /*font-size: 24px;*/
-/*}*/
+.post_detail-header {
+    font-size: 34px;
+}
 
 .intro-header .container .post-heading .post_detail-header h2.subheading {
     font-size: 24px;
@@ -104,6 +103,20 @@ footer .copyright {
     margin-top: 10%;
 }
 
+.post-detail {
+    font-size: 17px !important;
+
+}
+
+.post-detail p {
+    margin: 15px 0;
+    line-height: 28px;
+}
+
+.post-image_desrciption {
+    font-size: 15px;
+}
+
 @media screen and (max-width: 400px) {
     .pager .current-page-min {
         display: block;
@@ -117,20 +130,20 @@ footer .copyright {
         font-size: 26px;
     }
 
-    .post_detail-header {
-        font-size: 24px;
-    }
-
-    .post-detail {
-        font-size: 85% !important;
-    }
-
     .intro-header-post_detail {
         height: 54px;
     }
 
     .post-meta {
         margin: 20px auto;
+    }
+
+    .post_detail-header {
+        font-size: 24px;
+    }
+
+    .post-preview .post-title {
+        font-size: 24px !important;
     }
 }
 
@@ -142,12 +155,14 @@ footer .copyright {
     article {
         margin-top: 60px;
     }
+}
 
+@media screen and (max-width: 989px) and (min-width: 401px) {
     .post_detail-header {
-        font-size: 30px;
+        font-size: 28px;
     }
 
-    .post-detail {
-        font-size: 90% !important;
+    .post-preview .post-title {
+        font-size: 26px !important;
     }
 }

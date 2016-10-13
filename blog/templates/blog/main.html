@@ -30,14 +30,13 @@
                 {% for post in posts %}
                     <div class="post-preview">
                         <a href="{% url 'post_detail' pk=post.pk %}">
-                            <h2 class="post-title post-interesting">
+                            <h2 class="post-title">
                                 {{ post.title }}
                             </h2>
-                            <h3 class="post-subtitle">
-                                {{ post.preview }}
-                            </h3>
+{#                            <h3 class="post-subtitle">#}
+{#                                {{ post.preview }}#}
+{#                            </h3>#}
                         </a>
-
                         <p class="post-meta">{{ post.date_created }}<span class="post-category">{{ post.category }}</span></p>
                     </div>
                     <hr>
