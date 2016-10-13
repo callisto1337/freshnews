@@ -49,8 +49,13 @@
                                 <img class="img-responsive" src="/{{ post.image }}" alt="">
                             </a>
                         </div>
-                        <p class="post-meta post-image_desrciption">&#171;{{ post.image_description }}&#187;</p>
+                        {% if post.image_description %}
+                                <p class="post-meta post-image_desrciption">&#171;{{ post.image_description }}&#187;</p>
+                        {% endif %}
                     {% endif %}
+
+
+
                     <p>{{ post.content|safe }}</p>
 
                     {# Pager #}

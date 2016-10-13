@@ -89,6 +89,10 @@ h2.post-title {
     margin-top: 30px;
 }
 
+.img-responsive {
+    margin-bottom: 10px;
+}
+
 .post-detail_image:last-child {
     margin-bottom: 20px;
 }
