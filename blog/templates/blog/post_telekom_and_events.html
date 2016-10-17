@@ -50,16 +50,14 @@
                             </a>
                         </div>
                         {% if post.image_description %}
-                                <p class="post-meta post-image_desrciption">&#171;{{ post.image_description }}&#187;</p>
+                                <p class="post-meta post-image_desrciption">{{ post.image_description }}</p>
                         {% endif %}
                     {% endif %}
 
-
-
-                    <p>{{ post.content|safe }}</p>
+                    {{ post.content|safe }}
 
                     {# Pager #}
-                    <p class="source"><a target="_blank" href="{{ post.source_link }}">Источник</a></p>
+                    <a class="source" target="_blank" href="{{ post.source_link }}">{{ post.source_title }}</a>
                     <ul class="pager">
                         <li class="next btn-previous">
                             <a href="" onclick="history.back()">Назад</a>

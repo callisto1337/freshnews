@@ -17,7 +17,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=100, unique=True, verbose_name=('Название'))
-    preview = models.TextField(max_length=300, verbose_name=('Превью'))
+    # preview = models.TextField(max_length=300, verbose_name=('Превью'))
     content = tinymce_models.HTMLField(default='', verbose_name=('Контент'))
     image = models.ImageField(upload_to='media/', null=True, blank=True, verbose_name='Картинка')
     image_description = models.CharField(max_length=150, null=True, blank=True, verbose_name=('Описание картинки'))
@@ -26,6 +26,7 @@ class Post(models.Model):
     published = models.BooleanField(default=True, verbose_name=('Опубликован'))
     category = models.ForeignKey(Category, null=True, blank=True, verbose_name=('Категория'))
     source_link = models.CharField(max_length=200, unique=True, null=True, blank=True, verbose_name=('Ссылка на источник'))
+    source_title = models.CharField(max_length=20, default='Источник', verbose_name=('Название источника'))
 
     class Meta:
         verbose_name = 'Пост'
